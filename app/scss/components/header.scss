@@ -1,23 +1,26 @@
-@use '../util' as *;
+@use "../util" as *;
 
 .header {
-    margin-top: rem(36);
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: rem(36);
+
+  @include breakpoint(mediun) {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__title {
+    width: 100%;
+
     @include breakpoint(mediun) {
-        display: flex;
-        justify-content: space-between;
+      width: auto;
     }
+  }
 
-    &__title {
-
-    }
-
-    &__subtitle {
-        font-size: rem(14);
-        font-weight: 700;
-        color: var(--dark-text1);
-    }
-
-    &__toggle {
-
-    }
+  &__subtitle {
+    font-size: rem(14);
+    font-weight: 700;
+    color: var(--dark-text1);
+  }
 }
